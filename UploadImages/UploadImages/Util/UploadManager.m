@@ -18,6 +18,47 @@
 
 @implementation UploadManager
 
+//gcd上传
++ (void)commentReqWithImages:(NSArray *)imageArr
+                      params:(NSMutableDictionary *)pramaDic
+                     success:(void (^)(id JSON))success
+                     failure:(void (^)(NSError *))failure
+{
+    
+    dispatch_group_t group = dispatch_group_create();
+    
+    for (NSInteger i = 0; i < imageArr.count; i++) {
+        
+        dispatch_group_enter(group);
+        
+        NSURLSessionUploadTask* uploadTask = [UploadManager uploadTaskWithImage:imageArr[i] completion:^(NSURLResponse *response, id responseObject, NSError *error) {
+            if (error) {
+                NSLog(@"第 %d 张图片上传失败: %@", (int)i + 1, error);
+                dispatch_group_leave(group);
+            } else {
+//                @synchronized () {  NSMutableArray 是线程不安全的，所以加个同步锁
+//                    
+//                }
+                
+                //处理成功返回数据
+                
+                dispatch_group_leave(group);
+            }
+        }];
+        [uploadTask resume];
+    }
+    
+    
+    dispatch_group_notify(group, dispatch_get_main_queue(), ^{
+        
+        //图片上传之后的操作
+        
+    });
+
+    
+}
+
+
 + (void)uploadImagesWith:(NSArray *)images uploadFinish:(uploadCallBlock)finish success:(uploadSuccess)success failure:(uploadFailure)failure
 {
     
