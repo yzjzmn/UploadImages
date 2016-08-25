@@ -16,13 +16,13 @@
 		1F9A8EFB1D6D789200178A45 /* UploadImagesTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F9A8EFA1D6D789200178A45 /* UploadImagesTests.m */; };
 		1F9A8F061D6D789200178A45 /* UploadImagesUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F9A8F051D6D789200178A45 /* UploadImagesUITests.m */; };
 		1F9A8F141D6D792100178A45 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 1F9A8F131D6D792100178A45 /* Podfile */; };
-		1F9A8F1C1D6D795900178A45 /* JXTAlertTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F9A8F161D6D795900178A45 /* JXTAlertTools.m */; };
-		1F9A8F1D1D6D795900178A45 /* NSURLSessionWrapperOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F9A8F181D6D795900178A45 /* NSURLSessionWrapperOperation.m */; };
-		1F9A8F1E1D6D795900178A45 /* UploadManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F9A8F1A1D6D795900178A45 /* UploadManager.m */; };
 		1F9A8F251D6D796B00178A45 /* ALAssetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F9A8F201D6D796B00178A45 /* ALAssetViewController.m */; };
 		1F9A8F261D6D796B00178A45 /* ALAssetViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1F9A8F211D6D796B00178A45 /* ALAssetViewController.xib */; };
 		1F9A8F271D6D796B00178A45 /* PHAssetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F9A8F231D6D796B00178A45 /* PHAssetViewController.m */; };
 		1F9A8F281D6D796B00178A45 /* PHAssetViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1F9A8F241D6D796B00178A45 /* PHAssetViewController.xib */; };
+		1FC5C9E61D6EE7F900C97C0D /* JXTAlertTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FC5C9E11D6EE7F900C97C0D /* JXTAlertTools.m */; };
+		1FC5C9E71D6EE7F900C97C0D /* NSURLSessionWrapperOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FC5C9E31D6EE7F900C97C0D /* NSURLSessionWrapperOperation.m */; };
+		1FC5C9E81D6EE7F900C97C0D /* UploadManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FC5C9E51D6EE7F900C97C0D /* UploadManager.m */; };
 		39CEE86361A1AD697713560F /* libPods-UploadImages.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C4C2F1C9CD26EF386EC4725 /* libPods-UploadImages.a */; };
 /* End PBXBuildFile section */
 
@@ -61,18 +61,18 @@
 		1F9A8F051D6D789200178A45 /* UploadImagesUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UploadImagesUITests.m; sourceTree = "<group>"; };
 		1F9A8F071D6D789200178A45 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1F9A8F131D6D792100178A45 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
-		1F9A8F151D6D795900178A45 /* JXTAlertTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JXTAlertTools.h; sourceTree = "<group>"; };
-		1F9A8F161D6D795900178A45 /* JXTAlertTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JXTAlertTools.m; sourceTree = "<group>"; };
-		1F9A8F171D6D795900178A45 /* NSURLSessionWrapperOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSURLSessionWrapperOperation.h; sourceTree = "<group>"; };
-		1F9A8F181D6D795900178A45 /* NSURLSessionWrapperOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSURLSessionWrapperOperation.m; sourceTree = "<group>"; };
-		1F9A8F191D6D795900178A45 /* UploadManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UploadManager.h; sourceTree = "<group>"; };
-		1F9A8F1A1D6D795900178A45 /* UploadManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UploadManager.m; sourceTree = "<group>"; };
 		1F9A8F1F1D6D796B00178A45 /* ALAssetViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALAssetViewController.h; sourceTree = "<group>"; };
 		1F9A8F201D6D796B00178A45 /* ALAssetViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALAssetViewController.m; sourceTree = "<group>"; };
 		1F9A8F211D6D796B00178A45 /* ALAssetViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ALAssetViewController.xib; sourceTree = "<group>"; };
 		1F9A8F221D6D796B00178A45 /* PHAssetViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PHAssetViewController.h; sourceTree = "<group>"; };
 		1F9A8F231D6D796B00178A45 /* PHAssetViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PHAssetViewController.m; sourceTree = "<group>"; };
 		1F9A8F241D6D796B00178A45 /* PHAssetViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PHAssetViewController.xib; sourceTree = "<group>"; };
+		1FC5C9E01D6EE7F900C97C0D /* JXTAlertTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JXTAlertTools.h; sourceTree = "<group>"; };
+		1FC5C9E11D6EE7F900C97C0D /* JXTAlertTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JXTAlertTools.m; sourceTree = "<group>"; };
+		1FC5C9E21D6EE7F900C97C0D /* NSURLSessionWrapperOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSURLSessionWrapperOperation.h; sourceTree = "<group>"; };
+		1FC5C9E31D6EE7F900C97C0D /* NSURLSessionWrapperOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSURLSessionWrapperOperation.m; sourceTree = "<group>"; };
+		1FC5C9E41D6EE7F900C97C0D /* UploadManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UploadManager.h; sourceTree = "<group>"; };
+		1FC5C9E51D6EE7F900C97C0D /* UploadManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UploadManager.m; sourceTree = "<group>"; };
 		9AE89B69C02C17D447CC870D /* Pods-UploadImages.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UploadImages.release.xcconfig"; path = "Pods/Target Support Files/Pods-UploadImages/Pods-UploadImages.release.xcconfig"; sourceTree = "<group>"; };
 		9C4C2F1C9CD26EF386EC4725 /* libPods-UploadImages.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-UploadImages.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4CE72110E3BBA50CC05D6F9 /* Pods-UploadImages.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UploadImages.debug.xcconfig"; path = "Pods/Target Support Files/Pods-UploadImages/Pods-UploadImages.debug.xcconfig"; sourceTree = "<group>"; };
@@ -130,7 +130,7 @@
 		1F9A8EDF1D6D789200178A45 /* UploadImages */ = {
 			isa = PBXGroup;
 			children = (
-				1F9A8F1B1D6D795900178A45 /* Util */,
+				1FC5C9DF1D6EE7F900C97C0D /* Util */,
 				1F9A8EE31D6D789200178A45 /* AppDelegate.h */,
 				1F9A8EE41D6D789200178A45 /* AppDelegate.m */,
 				1F9A8EE61D6D789200178A45 /* ViewController.h */,
@@ -176,18 +176,17 @@
 			path = UploadImagesUITests;
 			sourceTree = "<group>";
 		};
-		1F9A8F1B1D6D795900178A45 /* Util */ = {
+		1FC5C9DF1D6EE7F900C97C0D /* Util */ = {
 			isa = PBXGroup;
 			children = (
-				1F9A8F151D6D795900178A45 /* JXTAlertTools.h */,
-				1F9A8F161D6D795900178A45 /* JXTAlertTools.m */,
-				1F9A8F171D6D795900178A45 /* NSURLSessionWrapperOperation.h */,
-				1F9A8F181D6D795900178A45 /* NSURLSessionWrapperOperation.m */,
-				1F9A8F191D6D795900178A45 /* UploadManager.h */,
-				1F9A8F1A1D6D795900178A45 /* UploadManager.m */,
+				1FC5C9E01D6EE7F900C97C0D /* JXTAlertTools.h */,
+				1FC5C9E11D6EE7F900C97C0D /* JXTAlertTools.m */,
+				1FC5C9E21D6EE7F900C97C0D /* NSURLSessionWrapperOperation.h */,
+				1FC5C9E31D6EE7F900C97C0D /* NSURLSessionWrapperOperation.m */,
+				1FC5C9E41D6EE7F900C97C0D /* UploadManager.h */,
+				1FC5C9E51D6EE7F900C97C0D /* UploadManager.m */,
 			);
-			name = Util;
-			path = ../../../coding/UploadImages/UploadImages/Util;
+			path = Util;
 			sourceTree = "<group>";
 		};
 		B8BFB59534BE2ED2BD5BDF61 /* Pods */ = {
@@ -391,13 +390,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1F9A8F1D1D6D795900178A45 /* NSURLSessionWrapperOperation.m in Sources */,
 				1F9A8F271D6D796B00178A45 /* PHAssetViewController.m in Sources */,
+				1FC5C9E61D6EE7F900C97C0D /* JXTAlertTools.m in Sources */,
+				1FC5C9E81D6EE7F900C97C0D /* UploadManager.m in Sources */,
 				1F9A8EE81D6D789200178A45 /* ViewController.m in Sources */,
-				1F9A8F1C1D6D795900178A45 /* JXTAlertTools.m in Sources */,
 				1F9A8F251D6D796B00178A45 /* ALAssetViewController.m in Sources */,
 				1F9A8EE51D6D789200178A45 /* AppDelegate.m in Sources */,
-				1F9A8F1E1D6D795900178A45 /* UploadManager.m in Sources */,
+				1FC5C9E71D6EE7F900C97C0D /* NSURLSessionWrapperOperation.m in Sources */,
 				1F9A8EE21D6D789200178A45 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
