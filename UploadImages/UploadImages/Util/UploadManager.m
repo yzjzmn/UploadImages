@@ -25,6 +25,8 @@
                      failure:(void (^)(NSError *))failure
 {
     
+    __block NSInteger imgBackCount = 0;
+    
     dispatch_group_t group = dispatch_group_create();
     
     for (NSInteger i = 0; i < imageArr.count; i++) {
@@ -39,6 +41,15 @@
 //                @synchronized () {  NSMutableArray 是线程不安全的，所以加个同步锁
 //                    
 //                }
+                imgBackCount++;
+                if (imgBackCount == imageArr.count) {
+                    dispatch_group_notify(group, dispatch_get_main_queue(), ^{
+                        
+                        //图片上传之后的操作
+                        
+                    });
+
+                }
                 
                 //处理成功返回数据
                 
@@ -47,15 +58,6 @@
         }];
         [uploadTask resume];
     }
-    
-    
-    dispatch_group_notify(group, dispatch_get_main_queue(), ^{
-        
-        //图片上传之后的操作
-        
-    });
-
-    
 }
 
 
@@ -63,7 +65,11 @@
 {
     
 //自己在处理operation上传多图的时候， 可能会出现bug   completionOperation在最后一个uploadOperation还没完成时就执行了   会导致少一张图    暂时没找到原因；希望有大神能够找出问题所在
-//针对这个bug  我选择了  使用GCD替换NSOperation的方式 （GCD和NSOperation之间的优缺点比较就不提了）
+// （GCD和NSOperation之间的优缺点比较就不提了）
+
+//很坑,最终测试  两个方法都没有问题  主要还是大量的异步操作.  导致 最后一个task回调回来的时候  completion的依赖触发,就执行完成回调了,这时候最后一个图上传的结果才回来
+//针对这个大坑,只能在图片上传task里面  进行判断  成功个数count和数组个数相等  再执行fisish
+    
     
     NSOperationQueue *queue = [[NSOperationQueue alloc] init];
     
@@ -74,13 +80,10 @@
             NSLog(@"上传完成!");
             
             finish();
-            //all images had upload success
-            
-            //you can do next
-            
         }];
     }];
     
+    __block NSInteger imgBackCount = 0;
     for (NSInteger i = 0; i < images.count; i++) {
         
         NSURLSessionUploadTask* uploadTask = [UploadManager uploadTaskWithImage:images[i] completion:^(NSURLResponse *response, id responseObject, NSError *error) {
@@ -89,6 +92,7 @@
                 failure(error, (int)i);
             } else {
                 NSLog(@"第 %d 张图片上传成功: ", (int)i + 1);
+                imgBackCount++;
                 @synchronized (images) { // NSMutableArray 是线程不安全的，所以加个同步锁
                     
                     NSError *error = nil;
@@ -101,6 +105,11 @@
                      */
                     
                 }
+                
+                if (imgBackCount == images.count) {
+                    [queue addOperation:completionOperation];
+                }
+                
             }
         }];
         
@@ -110,8 +119,6 @@
         [queue addOperation:uploadOperation];
         
     }
-    [queue addOperation:completionOperation];
-    
 }
 
 #pragma mark - util
